@@ -29,7 +29,7 @@ public class gestor_bd {
         }
         
     }
-     public boolean login(String correo, String password){
+   public boolean login(String correo, String password){
          Connection con = null;
         Statement stm;
         int result=0;
@@ -37,8 +37,7 @@ public class gestor_bd {
             
             con = ConectaBD.abrir();
             stm=con.createStatement();
-            result=stm.executeUpdate("insert into login(correo, password)"+
-               "values('"+correo+"','"+password+"');");
+            result=stm.executeUpdate("select correo, password FROM registro WHERE correo='"+correo+"', password='"+password+"'");
             
             if(result!=0){
                 ConectaBD.cerrar();
