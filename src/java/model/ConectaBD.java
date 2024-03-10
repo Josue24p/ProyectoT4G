@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 public class ConectaBD {
     public static Connection con;
     private static String bd="proyecto_t4g";
-    private static String usuario="root";
+    private static String usuario="sa";
     private static String pass="";
     private static String url="jdbc:mysql://localhost:/"+bd;
     
